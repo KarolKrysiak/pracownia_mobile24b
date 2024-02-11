@@ -1,0 +1,10 @@
+html, body {
+    height: auto;
+}
+
+main img, h2, main>p {
+    margin-bottom: var(--gap-size);
+    margin-top: var(--gap-size);
+    /* color: aliceblue; */
+}
+

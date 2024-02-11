@@ -8,6 +8,12 @@ main p {
     align-items: center;
 }
 
+main p:nth-child(1) {
+    /* background-color: antiquewhite; */
+    align-items: end;
+    padding-bottom: calc(2 * var(--gap-size));
+}
+
 footer {
     display: grid;
     /* padding-bottom: calc(1 * var(--margin)); */
