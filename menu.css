@@ -1,0 +1,13 @@
+:root {
+    --font-size: 8vw;
+}
+
+html {
+    background-color: var(--menu-color);
+}
+
+@media (min-aspect-ratio: 1/1) {
+    :root {
+        --font-size: 8vh;
+    }
+}

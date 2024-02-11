@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekty</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projekty.css">
+    <link rel="shortcut icon" href="/images/icon-kk.png">
+    <meta name="author" content="Kuba Krysiak">
+    <meta name="copyright" content="Kuba Krysiak">
+</head>
+<body>
+    <header><a href="index.html"><img class=logo src="images/logo-kk-12pt.svg" alt="Kuba Krysiak Autorska Pracownia Projektowa"></a></header>
+    <main><ul class="gallery-container">
+        <li>
+            <img class="project1" src="projects/W-01-4.gif">
+            <img class="project1" src="projects/W-01-1m.jpg">
+            <img class="project1" src="projects/W-01-2m.jpg">
+            <img class="project1" src="projects/W-01-3m.jpg">
+            <img class="project1" src="projects/W-01-5m.jpg">
+            <img class="project1" src="projects/W-01-6m.jpg">
+            <p>Aranżacja mieszkania we Wrocławiu</p>
+        </li>
+        <li>
+            <img class="project2" src="projects/W-02-1m.jpg">
+            <img class="project2" src="projects/W-02-2m.jpg">
+            <img class="project2" src="projects/W-02-3m.jpg">
+            <img class="project2" src="projects/W-02-6m.png">
+            <img class="project2" src="projects/W-02-5m.jpg">
+            <p>Renowacja mieszkania w Warszawie</p>
+        </li>
+        <li>
+            <img class="project3" src="projects/A-01-1m.jpg">
+            <img class="project3" src="projects/A-01-2o.jpg">
+            <p>Zespół domów atrialnych</p>
+        </li>
+    </ul></main>
+    <nav><a href="menu.html">Menu</a></nav>
+
+
+<script>
+    var slideIndex = {
+        'project1': 1,
+        'project2': 1,
+        'project3': 1
+    };
+
+    // Add event listeners for each project
+    document.querySelectorAll('.project1, .project2, .project3').forEach(function (project) {
+        project.addEventListener('click', function () {
+            var projectClass = project.classList[0];
+            plusDivs(1, projectClass);
+        });
+    });
+
+    function plusDivs(n, projectClass) {
+        showDivs(slideIndex[projectClass] += n, projectClass);
+    }
+
+    function showDivs(n, projectClass) {
+        var i;
+        var x = document.getElementsByClassName(projectClass);
+        if (n > x.length) {
+            slideIndex[projectClass] = 1;
+        }
+        if (n < 1) {
+            slideIndex[projectClass] = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex[projectClass] - 1].style.display = "block";
+    }
+
+    // Po załadowaniu strony
+    window.onload = function () {
+        showDivs(1, 'project1'),
+        showDivs(2, 'project2'),
+        showDivs(3, 'project3');
+    };
+
+</script>
+</body>
+</html>

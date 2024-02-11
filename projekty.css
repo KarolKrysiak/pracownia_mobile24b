@@ -1,0 +1,29 @@
+html, body {
+    height: auto;
+}
+
+header {
+    position: sticky;
+    top: var(--margin);
+}
+
+li img {
+    height: calc(100vw - 2 * var(--margin));
+    width: 100vw;
+    object-fit: contain;
+    object-position: left;
+    padding: calc(2 * var(--margin)) 0 calc(4 * var(--margin)) 0;
+}
+
+li:nth-of-type(2) img {
+    /* object-position: right; */
+}
+
+li p {
+    display: none;
+}
+
+nav {
+    position: fixed;
+    bottom: var(--margin);
+} 
