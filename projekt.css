@@ -2,7 +2,7 @@ html, body {
     height: auto;
 }
 
-main img, h2, main>p {
+main img, h2, ul, main>p {
     margin-bottom: var(--gap-size);
     margin-top: var(--gap-size);
     /* color: aliceblue; */
@@ -10,5 +10,10 @@ main img, h2, main>p {
 
 ul {
     margin-left: 20%;
+}
+
+nav {
+    position: fixed;
+    bottom: var(--margin);
 }
 
