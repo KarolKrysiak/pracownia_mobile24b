@@ -9,14 +9,12 @@ main p {
 }
 
 main p:nth-child(1) {
-    /* background-color: antiquewhite; */
     align-items: end;
     padding-bottom: calc(2 * var(--gap-size));
 }
 
 footer {
     display: grid;
-    /* padding-bottom: calc(1 * var(--margin)); */
     margin-bottom: calc(1 * var(--gap-size));
 }
 
@@ -30,7 +28,6 @@ footer ul:nth-child(1) {
 
 footer ul:nth-of-type(2) {
     height: fit-content;
-    /* padding-bottom: calc(1 * var(--margin)); */
 }
 
 nav {

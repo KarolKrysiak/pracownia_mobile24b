@@ -13,11 +13,6 @@ li img {
     object-fit: contain;
     object-position: left;
     margin: calc(2 * var(--margin)) 0 calc(2 * var(--margin)) 0;
-    /* background-color: antiquewhite; */
-}
-
-li:nth-of-type(2) img {
-    /* object-position: right; */
 }
 
 li p {
